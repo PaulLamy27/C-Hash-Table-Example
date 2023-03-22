@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	map<string, string> dutchDictionary;
+	dutchDictionary.insert(pair<string, string>("upset", "van streek"));
+	dutchDictionary.insert(pair<string, string>("sad", "droevig"));
+	dutchDictionary.insert(pair<string, string>("happy", "gelukkig"));
+
+
+	for (auto pair : dutchDictionary) {
+		cout << pair.first << " in Dutch is " << pair.second << endl;
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
